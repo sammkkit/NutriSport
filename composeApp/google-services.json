@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "761536189608",
+    "project_id": "nutritionwallah",
+    "storage_bucket": "nutritionwallah.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761536189608:android:20b2e7fdca272a36071e9d",
+        "android_client_info": {
+          "package_name": "com.samkit.nutritionwallah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761536189608-jtlofrnpkcu1rmbeu38lhba1f122lcnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samkit.nutritionwallah",
+            "certificate_hash": "22baed12c03fcebbd2b30620929157931983869b"
+          }
+        },
+        {
+          "client_id": "761536189608-mghaq931rm9fparte37ci322kik7jkn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW6LMsnwOsxxW3lLlJy0UlhKueJJH3pQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761536189608-mghaq931rm9fparte37ci322kik7jkn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

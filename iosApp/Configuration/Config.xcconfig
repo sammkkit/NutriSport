@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=NutritionWallah
+PRODUCT_BUNDLE_IDENTIFIER=com.samkit.nutritionwallah.NutritionWallah$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
