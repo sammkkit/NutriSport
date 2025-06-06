@@ -2,6 +2,7 @@ package com.nutritionwallah.data
 
 import com.nutritionwallah.data.domain.CustomerRepository
 import com.nutritionwallah.shared.domain.Customer
+import com.nutritionwallah.shared.util.RequestState
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
@@ -40,4 +41,14 @@ class CustomerRepositoryImpl: CustomerRepository {
             onError("Error While Creating a customer : ${e.message.toString()}")
         }
     }
+
+    override suspend fun signOutUser(): RequestState<Unit> {
+        return try {
+            Firebase.auth.signOut()
+            RequestState.Success(Unit)
+        }catch (e:Exception){
+            RequestState.Error(e.message.toString())
+        }
+    }
+
 }

@@ -23,7 +23,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "di"
+            baseName = "profile"
             isStatic = true
         }
     }
@@ -31,6 +31,12 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             resources.srcDir("src/commonMain/composeResources")
+        }
+
+        androidMain.dependencies {
+            implementation(compose.preview)
+            implementation(libs.androidx.activity.compose)
+            implementation(libs.splash.screen)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -44,15 +50,10 @@ kotlin {
             implementation(libs.messagebar.kmp)
             implementation(libs.auth.kmp)
             implementation(libs.auth.firebase.kmp)
-
-            implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
-
             implementation(project(path = ":shared"))
             implementation(project(path = ":data"))
-            implementation(project(path = ":feature:auth"))
-            implementation(project(path = ":feature:home"))
         }
         commonTest.dependencies {
 //            implementation(libs.kotlin.test)
@@ -61,7 +62,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.samkit.di"
+    namespace = "com.samkit.profile"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
